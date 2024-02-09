@@ -1,0 +1,34 @@
+﻿@using WebApplication1.DTO
+
+@{
+    ViewData["Title"] = "Find";
+    int counter = 0;
+}
+@model List<UserDto>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">SureName</th>
+            <th scope="col">Age</th>
+            <th scope="col">Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (UserDto user in Model)
+        {
+            counter++;
+            <tr>
+                <th scope="row">@counter</th>
+                <td>@user.Name</td>
+                <td>@user.SureName</td>
+                <td>@user.Age</td>
+                <td>@user.DateTime</td>
+
+
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,16 @@
+﻿@using WebApplication1.DTO
+
+@{
+    ViewData["Title"] = "Index";
+}
+@model TimeDto
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Zaman seçin</h2>
+    <form id="dateForm" method="post" asp-action="Find" asp-controller="Search">
+        <div class="form-group">
+            <label for="datetimeInput">Tarix</label>
+            <input type="date" asp-for="DateTime" class="form-control" id="datetimeInput">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>
